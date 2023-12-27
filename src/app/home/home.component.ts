@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  name=""
+  name:string="";
 
-  onSaveText(firstName:string, lastName: string){
+  onSaveName(firstName:string, lastName: string){
     this.name=`${firstName} ${lastName}`
     console.log("button pressed");
   }
