@@ -1,3 +1,17 @@
 <div>
-    <h1>Hello, {{name}}</h1>
+    <form class="mx-auto w-75 mt-5">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">First Name:</label>
+          <input type="text" class="form-control" #exampleInputEmail1>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Last Name:</label>
+          <input type="text" class="form-control" #exampleInputPassword1>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="onSaveText(exampleInputEmail1.value, exampleInputPassword1.value )">Show Name</button>
+      </form>
+
+      <div class="mx-auto w-75 mt-5">
+        <p>My name is:{{name}}</p>
+      </div>
 </div>
