@@ -1,0 +1,12 @@
+<div>
+    <div class="container mt-5">
+        <div class="calculator">
+            <div class="result">
+                <input type="text" name="result" #result class="w-100 mb-2" [value]="resultVal">
+            </div>
+            <div class="buttons row g-0 w-100">
+                <button *ngFor="let btn of btns" type="button" class="col-3 p-0" (click)="btnfunction(btn)">{{btn}}</button>
+            </div>
+        </div>
+    </div>
+</div>

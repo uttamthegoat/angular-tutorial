@@ -1,0 +1,14 @@
+.calculator{
+    width: 300px;
+    margin: auto;
+}
+.calculator > div > input{
+    height: 50px;
+    border-radius: 10px;
+    /* margin: 1px; */
+}
+.calculator > div > button{
+    height: 50px;
+    border-radius: 10px;
+    /* margin: 1px; */
+}
