@@ -8,11 +8,12 @@ import { ShoppinglistComponent } from './shoppinglist/shoppinglist.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FactSquareComponent } from './fact-square/fact-square.component';
 import { StudentInfoComponent } from './student-info/student-info.component';
+import { TodoComponent } from './todo/todo.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, HomeComponent, FooterComponent,ShoppinglistComponent,CalculatorComponent,FactSquareComponent,StudentInfoComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, HomeComponent, FooterComponent,ShoppinglistComponent,CalculatorComponent,FactSquareComponent,StudentInfoComponent,TodoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
