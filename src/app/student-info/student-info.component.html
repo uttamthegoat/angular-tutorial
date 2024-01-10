@@ -1,0 +1,25 @@
+<div class="container mt-5 w-100">
+  <h2>Student Details</h2>
+  <p>Total students: {{studentCount}}</p>
+  <table>
+    <thead class="pb-2">
+      <tr>
+        <th class="pe-2">ID</th>
+        <th class="pe-2">Name</th>
+        <th class="pe-2">Email</th>
+        <th class="pe-2">Gender</th>
+        <th class="pe-2">CGPA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentInfo">
+        <td class="pe-2">{{ student.id }}</td>
+        <td class="pe-2">{{ student.name }}</td>
+        <td class="pe-2">{{ student.email }}</td>
+        <td class="pe-2">{{ student.gender }}</td>
+        <td class="pe-2">{{ student.cgpa }}</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</div>
