@@ -1,26 +1,63 @@
 <div class="container mt-5">
-    
-    <!-- add tasks -->
-    <h2>Add tasks</h2>
-    <form class="d-flex flex-column">
-        <input type="text" name="task" #taskInfo placeholder="Enter task..." class="pe-3 p-2 mb-3">
-        <button type="button" class="btn btn-primary" style="width: fit-content;" (click)="addTask(taskInfo.value)">Add task</button>
-    </form>
-    <div>
-        <h1 class="text-center">Tasks</h1>
-        <div *ngFor="let task of todolist" class="d-flex justify-content-between mt-2">
-            <p>{{task}}</p>
-            <div>
-                <button type="button" class="btn btn-success me-2" (click)="startEdit(task)">Edit</button>
-                <button type="button" class="btn btn-danger" (click)="deleteTask(task)">Delete</button>
-            </div>
-        </div>
+  <!-- add tasks -->
+  <h2>Add tasks</h2>
+  <form class="d-flex flex-column">
+    <input
+      type="text"
+      name="task"
+      #taskInfo
+      placeholder="Enter task..."
+      class="pe-3 p-2 mb-3"
+    />
+    <button
+      type="button"
+      class="btn btn-primary"
+      style="width: fit-content"
+      (click)="addTask(taskInfo.value)"
+    >
+      Add task
+    </button>
+  </form>
+  <div>
+    <h1 class="text-center">Tasks</h1>
+    <div
+      *ngFor="let task of todolist"
+      class="d-flex justify-content-between mt-2"
+    >
+      <p>{{ task }}</p>
+      <div>
+        <button
+          type="button"
+          class="btn btn-success me-2"
+          (click)="startEdit(task)"
+        >
+          Edit
+        </button>
+        <button type="button" class="btn btn-danger" (click)="deleteTask(task)">
+          Delete
+        </button>
+      </div>
     </div>
+  </div>
 
-    <!-- Edit form -->
-    <h3>Edit form</h3>
-    <form class="d-flex flex-column" [style.display]="show">
-        <input type="text" name="taskEdit" #taskEdit placeholder="Enter task..." class="pe-3 p-2 mb-3"[value]="toEditTask">
-        <button type="button" class="btn btn-primary" style="width: fit-content;" (click)="editTask(taskEdit.value)">Save changes</button>
-    </form>
+  <!-- Edit form -->
+  <h3>Edit form</h3>
+  <form class="d-flex flex-column" [style.display]="show">
+    <input
+      type="text"
+      name="taskEdit"
+      #taskEdit
+      placeholder="Enter task..."
+      class="pe-3 p-2 mb-3"
+      [value]="toEditTask"
+    />
+    <button
+      type="button"
+      class="btn btn-primary"
+      style="width: fit-content"
+      (click)="editTask(taskEdit.value)"
+    >
+      Save changes
+    </button>
+  </form>
 </div>
