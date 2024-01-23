@@ -1,26 +1,37 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule ],
   templateUrl: './calculator.component.html',
   styleUrl: './calculator.component.css'
 })
 export class CalculatorComponent {
-  resultVal:string=""
-  btns:string[] = ["1","2","3","4","5","6","7","8","9","0",".","+","-","*","/","C","AC","%","="];
+  num1: number=0;
+  num2: number=0;
+  result: number=0;
 
-  btnfunction(btnVal:string){
-    if (btnVal==="AC") {
-      this.resultVal="";
-    } else if(btnVal==="C"){
-      this.resultVal=this.resultVal.slice(0, -1);
-    } else if(btnVal==="="){
-      this.resultVal=eval(this.resultVal)
+  add() {
+    this.result = this.num1 + this.num2;
+  }
+
+  subtract() {
+    this.result = this.num1 - this.num2;
+  }
+
+  multiply() {
+    this.result = this.num1 * this.num2;
+    console.log(this.num1);
+  }
+
+  divide() {
+    if (this.num2 !== 0) {
+      this.result = this.num1 / this.num2;
     } else {
-      this.resultVal=this.resultVal.concat(btnVal)
+      alert('Cannot divide by zero');
     }
   }
 }
