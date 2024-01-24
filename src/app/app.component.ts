@@ -11,11 +11,12 @@ import { StudentInfoComponent } from './student-info/student-info.component';
 import { TodoComponent } from './todo/todo.component';
 import { UsersComponent } from './users/users.component'
 import { LoginComponent } from './login/login.component'
+import { EmployeesComponent } from './employees/employees.component'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, HomeComponent, FooterComponent,ShoppinglistComponent,CalculatorComponent,FactSquareComponent,StudentInfoComponent,TodoComponent,UsersComponent, LoginComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, HomeComponent, FooterComponent,ShoppinglistComponent,CalculatorComponent,FactSquareComponent,StudentInfoComponent,TodoComponent,UsersComponent, LoginComponent,EmployeesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

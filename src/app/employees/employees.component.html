@@ -1,1 +1,38 @@
-<p>employees works!</p>
+<div class="container">
+  <nav class="mb-5">
+    <form (submit)="searchEmp(searchname.value,searchsal.value)" class="d-flex flex-column align-items-center ">
+      <label for="searchname" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        #searchname
+        aria-describedby="emailHelp"
+        style="width: 600px;"
+      />
+      <label for="searchsal" class="form-label">Salary</label>
+      <input
+        type="number"
+        class="form-control"
+        #searchsal
+        aria-describedby="emailHelp"
+        style="width: 600px;"
+      />
+    </form>
+  </nav>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Sl No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <th scope="row">{{ employee.id }}</th>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.salary }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
