@@ -1,16 +1,13 @@
-<form class="container mt-5">
-  <div class="mb-3">
-    <label for="numberInput1" class="form-label">Enter a number:</label>
-    <input
-      type="number"
-      class="form-control"
-      #numberInput1
-      aria-describedby="numberHelp"
-    />
+<form>
+  <div>
+    <label for="numberInput1">Enter a number:</label>
+    <input type="number" #numberInput1 />
   </div>
-  <button type="button" class="btn btn-primary" (click)="calculate(convert(numberInput1.value))">Calculate</button>
+  <button type="button" (click)="calculate(convert(numberInput1.value))">
+    Calculate
+  </button>
 
-  <div class="answers mt-3">
+  <div>
     <p>Factorial:{{ fact }}</p>
     <p>Square:{{ square }}</p>
   </div>

@@ -1,23 +1,29 @@
-<div class="container mt-5 w-100">
+<div>
   <h2>Student Details</h2>
-  <p>Total students: {{studentCount}}</p>
+  <div>
+    <label for="studentCnt">Enter no of Students: </label>
+    <input type="number" #studentCnt />
+    <button type="button" (click)="getStudents(studentCnt.value)">
+      get students
+    </button>
+  </div>
   <table>
-    <thead class="pb-2">
+    <thead>
       <tr>
-        <th class="pe-2">ID</th>
-        <th class="pe-2">Name</th>
-        <th class="pe-2">Email</th>
-        <th class="pe-2">Gender</th>
-        <th class="pe-2">CGPA</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>CGPA</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let student of studentInfo">
-        <td class="pe-2">{{ student.id }}</td>
-        <td class="pe-2">{{ student.name }}</td>
-        <td class="pe-2">{{ student.email }}</td>
-        <td class="pe-2">{{ student.gender }}</td>
-        <td class="pe-2">{{ student.cgpa }}</td>
+      <tr *ngFor="let student of showStudents">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.gender }}</td>
+        <td>{{ student.cgpa }}</td>
       </tr>
       <!-- Add more rows as needed -->
     </tbody>

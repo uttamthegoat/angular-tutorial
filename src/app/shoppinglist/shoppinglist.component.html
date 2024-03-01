@@ -1,25 +1,26 @@
 <!-- string-list.component.html -->
 
-<div class="container">
+<div>
   <h2>Shopping plan</h2>
 
-
-  <form class="mx-auto mt-5">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Add Item:</label>
-      <input type="text" class="form-control" #addValue>
+  <form>
+    <div>
+      <label for="exampleInputEmail1">Add Item:</label>
+      <input type="text" #addValue />
     </div>
-    <button type="button" class="btn btn-primary" (click)="addItem(addValue.value )">Add</button>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Remove Item:</label>
-      <input type="text" class="form-control" #removeValue>
+    <button type="button" (click)="addItem(addValue.value)">Add</button>
+    <div>
+      <label for="exampleInputPassword1">Remove Item:</label>
+      <input type="text" #removeValue />
     </div>
-    <button type="button" class="btn btn-primary" (click)="removeItem(removeValue.value)">Remove</button>
+    <button type="button" (click)="removeItem(removeValue.value)">
+      Remove
+    </button>
   </form>
 
-  <div class="mt-5">
+  <div>
     <h3>List of items</h3>
-    <div *ngFor="let str of items" class="ms-2">
+    <div *ngFor="let str of items">
       {{ str }}
     </div>
   </div>
